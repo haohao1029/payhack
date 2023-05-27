@@ -73,9 +73,14 @@ const UserStayDetail = () => {
     router.push('/user/cashback-success');
   };
   return (
-    <div className="px-4 py-4 bg-primary-100 h-[100vh] space-y-4 text-primary-800 ">
+    <div className="px-4 py-4 bg-primary-50 h-[100vh] space-y-4 text-primary-800">
       <div>
-        <h1 className="text-4xl font-semibold">Hi, Eugene</h1>
+        <h1 className="text-4xl font-semibold bg-clip-text bg-gradient-to-br from-pink-400 to-red-600">
+          Hi,{" "}
+          <span className="bg-clip-text bg-gradient-to-br from-primary-300 to-primary-700 text-transparent">
+            Eugene
+          </span>
+        </h1>
         <h2 className="text-2xl">
           Your <span className="font-semibold">current</span> stay at{" "}
           <span className="font-semibold underline">Eleanor Hotel</span>
@@ -84,7 +89,7 @@ const UserStayDetail = () => {
 
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold">Details</h2>
-        <div className="bg-primary-200 rounded-lg py-3 px-3 space-y-2">
+        <div className="bg-gradient-to-br from-primary-200 via-primary-200 to-primary-500 rounded-lg py-3 px-3 space-y-2">
           <h3 className="text-xl font-medium">
             From 14 June 2023 - 15 June 2023
           </h3>
