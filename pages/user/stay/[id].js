@@ -115,7 +115,10 @@ const UserStayDetail = () => {
             </div>
           </div>
           <div className="flex items-center justify-center pt-4">
-            <button className="bg-secondary-500 text-secondary-100 font-medium px-6 py-2 rounded-full">
+            <button
+              className="bg-secondary-500 text-secondary-100 font-medium px-6 py-2 rounded-full"
+              onClick={() => router.push("/user/cashback-success")}
+            >
               Check Cashback
             </button>
           </div>
