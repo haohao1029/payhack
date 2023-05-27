@@ -8,6 +8,7 @@ import {
   Title,
   Tooltip,
 } from "chart.js";
+import { useRouter } from 'next/router';
 
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import BottomNavigation from "../../../components/BottomNavigation";
@@ -66,6 +67,11 @@ const data = {
 };
 
 const UserStayDetail = () => {
+  const router = useRouter();
+
+  const handleButtonClick = () => {
+    router.push('/user/cashback-success');
+  };
   return (
     <div className="px-4 py-4 bg-primary-100 h-[100vh] space-y-4 text-primary-800 ">
       <div>
@@ -110,7 +116,7 @@ const UserStayDetail = () => {
             </div>
           </div>
           <div className="flex items-center justify-center pt-4">
-            <button className="bg-secondary-500 text-secondary-100 font-medium px-6 py-2 rounded-full">
+            <button className="bg-secondary-500 text-secondary-100 font-medium px-6 py-2 rounded-full" onClick={handleButtonClick}>
               Check Cashback
             </button>
           </div>
