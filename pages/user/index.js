@@ -1,6 +1,14 @@
-import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowRightCircleIcon,
+  ArrowRightIcon,
+} from "@heroicons/react/24/outline";
+
+import BottomNavigation from "../../components/BottomNavigation";
+import { useRouter } from "next/router";
 
 const UserDashboard = () => {
+  const router = useRouter();
+
   return (
     <div className="px-4 py-4 bg-stone-100 h-[100vh] space-y-4">
       <div>
@@ -10,7 +18,7 @@ const UserDashboard = () => {
 
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold">Current Stay</h2>
-        <div className="bg-stone-200 rounded-lg py-2 px-2 h-[12rem] flex flex-col justify-between">
+        <div className="bg-stone-200 rounded-lg py-3 px-3 h-[12rem] flex flex-col justify-between">
           <div>
             <h3 className="text-lg font-semibold">Hotel Eleanor - Room 204</h3>
             <h4 className="text-sm">14 June 2023 - 15 June 2023</h4>
@@ -18,8 +26,17 @@ const UserDashboard = () => {
 
           <div>
             <p className="text-md">
-              Electricity Used: <span className="text-green-600">50 kWh</span>
+              Device turned on for:
+              <span className="text-green-600"> 1 : 30 Hour</span>
             </p>
+            <div className="flex justify-between items-center">
+              <p className="text-md">
+                Electricity Used: <span className="text-green-600">50 kWh</span>
+              </p>
+              <a className="ml-auto pr-2">
+                <ArrowRightCircleIcon className="w-6" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -40,8 +57,11 @@ const UserDashboard = () => {
                 </div>
 
                 <div className="flex">
-                  <a className="ml-auto">
-                    <ArrowRightCircleIcon className="w-4" />
+                  <a
+                    className="ml-auto pr-1"
+                    onClick={() => router.push("/user/stay/1")}
+                  >
+                    <ArrowRightCircleIcon className="w-6" />
                   </a>
                 </div>
               </div>
@@ -49,6 +69,8 @@ const UserDashboard = () => {
           </div>
         </div>
       </div>
+
+      <BottomNavigation />
     </div>
   );
 };
