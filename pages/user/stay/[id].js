@@ -51,8 +51,8 @@ const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
+      label: "kiloWatt Hour",
+      data: labels.map(() => faker.datatype.number({ min: 0, max: 200 })),
       borderColor: "rgb(255, 99, 132)",
       backgroundColor: "rgba(255, 99, 132, 0.5)",
     },
@@ -99,6 +99,21 @@ const UserStayDetail = () => {
             </div>
           </div>
           <Line options={options} data={data} className="h-[10rem]" />
+          <div className="grid grid-cols-2">
+            <div className="text-left">
+              <p>Electricity Saved</p>
+              <p>Estimate Cashback</p>
+            </div>
+            <div className="text-left">
+              <p>: 163.5 kWh</p>
+              <p>: RM 20.00</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center pt-4">
+            <button className="bg-secondary-500 text-secondary-100 font-medium px-6 py-2 rounded-full">
+              Check Cashback
+            </button>
+          </div>
         </div>
       </div>
 
