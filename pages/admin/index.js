@@ -4,7 +4,7 @@ import { Heading } from '@chakra-ui/react'
 export default function SIgnup() {
   return (
     <Heading>
-      Welcome to Next.js!
+      ADMIN PAGE
     </Heading>
   )
 }
