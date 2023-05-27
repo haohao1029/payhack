@@ -5,6 +5,7 @@ const BottomNavigation = () => {
         <button
           type="button"
           class="inline-flex flex-col items-center justify-center px-5 bg-gray-50 dark:bg-gray-800 group"
+          onClick={() => window.location.replace("/user")}
         >
           <svg
             class="w-6 h-6 mb-1 text-blue-600 dark:text-blue-500 group-hover:text-blue-600 dark:group-hover:text-blue-500"
@@ -38,7 +39,7 @@ const BottomNavigation = () => {
             ></path>
           </svg>
           <span class="text-sm text-gray-500 dark:text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-500">
-            Wallet
+            History
           </span>
         </button>
         <button
