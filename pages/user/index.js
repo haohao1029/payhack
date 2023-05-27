@@ -10,7 +10,7 @@ const UserDashboard = () => {
   const router = useRouter();
 
   return (
-    <div className="px-4 py-4 bg-stone-100 h-[100vh] space-y-4">
+    <div className="px-4 py-4 bg-primary-100 h-[100vh] space-y-4 text-primary-800">
       <div>
         <h1 className="text-4xl font-semibold">Hi, Eugene</h1>
         <h2 className="text-2xl">Welcome Back</h2>
@@ -18,7 +18,7 @@ const UserDashboard = () => {
 
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold">Current Stay</h2>
-        <div className="bg-stone-200 rounded-lg py-3 px-3 h-[12rem] flex flex-col justify-between">
+        <div className="bg-primary-200 rounded-lg py-3 px-3 h-[12rem] flex flex-col justify-between">
           <div>
             <h3 className="text-lg font-semibold">Hotel Eleanor - Room 204</h3>
             <h4 className="text-sm">14 June 2023 - 15 June 2023</h4>
@@ -27,11 +27,12 @@ const UserDashboard = () => {
           <div>
             <p className="text-md">
               Device turned on for:
-              <span className="text-green-600"> 1 : 30 Hour</span>
+              <span className="text-green-600 font-medium"> 1 : 30 Hour</span>
             </p>
             <div className="flex justify-between items-center">
               <p className="text-md">
-                Electricity Used: <span className="text-green-600">50 kWh</span>
+                Electricity Used:{" "}
+                <span className="text-green-600 font-medium">50 kWh</span>
               </p>
               <a className="ml-auto pr-2">
                 <ArrowRightCircleIcon className="w-6" />
@@ -47,7 +48,7 @@ const UserDashboard = () => {
           <div className="flex gap-2 w-[60rem]">
             {[1, 1, 1, 1, 1].map((index) => (
               <div
-                className="bg-stone-200 rounded-lg py-2 px-2 h-[10rem] w-1/2 flex flex-col justify-between"
+                className="bg-primary-200 rounded-lg py-2 px-2 h-[10rem] w-1/2 flex flex-col justify-between"
                 key={index}
               >
                 <div>
