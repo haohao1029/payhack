@@ -3,12 +3,12 @@ import {
   ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 
+import { AiFillClockCircle } from "react-icons/ai";
 import BottomNavigation from "../../components/BottomNavigation";
+import { BsFillCalendarDateFill } from "react-icons/bs";
+import { GiElectric } from "react-icons/gi";
+import Link from "next/link";
 import { useRouter } from "next/router";
-
-import { AiFillClockCircle } from 'react-icons/ai'
-import { GiElectric } from 'react-icons/gi'
-import { BsFillCalendarDateFill } from 'react-icons/bs'
 
 const articleTitles = [
   "How to reduce electricity consumption in a small apartment",
@@ -51,8 +51,12 @@ const UserDashboard = () => {
 
           {/* Card content */}
           <div className="relative z-10 text-primary-700">
-            <h3 className="text-xl font-semibold text-white">Hotel Eleanor - Room 204</h3>
-            <h4 className="text-sm text-primary-500">14 June 2023 - 15 June 2023</h4>
+            <h3 className="text-xl font-semibold text-white">
+              Hotel Eleanor - Room 204
+            </h3>
+            <h4 className="text-sm text-primary-500">
+              14 June 2023 - 15 June 2023
+            </h4>
 
             <div className="mt-auto pt-5">
               <p className="text-md text-primary-500 font-semibold">
@@ -61,14 +65,13 @@ const UserDashboard = () => {
               </p>
               <div className="flex justify-between items-center font-semibold pt-2">
                 <p className="text-md text-primary-500 font-medium">
-                  <GiElectric/> {" "}
+                  <GiElectric />{" "}
                   <span className="text-primary-100 font-medium">50 kWh</span>
                 </p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
       <div className="space-y-4">
@@ -88,22 +91,21 @@ const UserDashboard = () => {
                   }}
                 ></div>
                 <div className="z-10 text-primary-500">
-                  <h3 className="text-lg font-semibold pb-3 text-white">Hotel Eleanor</h3>
+                  <h3 className="text-lg font-semibold pb-3 text-white">
+                    Hotel Eleanor
+                  </h3>
                   <h4 className="text-sm text-primary-400">
-                    <BsFillCalendarDateFill/> 
-                      <span className="text-white">
-                        1 May 2023
-                      </span>
+                    <BsFillCalendarDateFill />
+                    <span className="text-white">1 May 2023</span>
                   </h4>
                   <h4 className="text-sm text-white">2 months ago</h4>
                 </div>
                 <div className="flex text-gray-200 z-10">
-                  <a
-                    className="ml-auto pr-1"
-                    onClick={() => router.push("/user/stay/1")}
-                  >
-                    <ArrowRightCircleIcon className="w-6" />
-                  </a>
+                  <Link href="/user/stay/1" legacyBehavior>
+                    <a className="ml-auto pr-1">
+                      <ArrowRightCircleIcon className="w-6" />
+                    </a>
+                  </Link>
                 </div>
               </div>
             ))}

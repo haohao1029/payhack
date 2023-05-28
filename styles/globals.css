@@ -18,3 +18,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.gradient-title {
+  @apply bg-clip-text bg-gradient-to-br from-primary-300 to-primary-700 text-transparent;
+}
