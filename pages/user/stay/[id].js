@@ -10,7 +10,8 @@ import {
 } from "chart.js";
 import { useRouter } from 'next/router';
 
-import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
+import { FaUserAlt, FaBed, FaClock } from 'react-icons/fa'
+import { AiOutlineCheckCircle } from 'react-icons/ai'
 import BottomNavigation from "../../../components/BottomNavigation";
 import { Line } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
@@ -54,8 +55,8 @@ const data = {
     {
       label: "kiloWatt Hour",
       data: labels.map(() => faker.datatype.number({ min: 0, max: 200 })),
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      borderColor: "#27767a",
+      backgroundColor: "#f3fafa",
     },
     // {
     //   label: "Dataset 2",
@@ -73,7 +74,7 @@ const UserStayDetail = () => {
     router.push('/user/cashback-success');
   };
   return (
-    <div className="px-4 py-4 bg-primary-50 h-[100vh] space-y-4 text-primary-800">
+    <div className="px-4 py-4 bg-primary-50 h-[150vh] space-y-10 text-primary-800">
       <div>
         <h1 className="text-4xl font-semibold bg-clip-text bg-gradient-to-br from-pink-400 to-red-600">
           Hi,{" "}
@@ -89,26 +90,31 @@ const UserStayDetail = () => {
 
       <div className="space-y-2">
         <h2 className="text-2xl font-semibold">Details</h2>
-        <div className="bg-gradient-to-br from-primary-200 via-primary-200 to-primary-500 rounded-lg py-3 px-3 space-y-2">
+        <div className="bg-primary-50 rounded-md py-3 px-3 space-y-2 shadow-xl">
+
           <h3 className="text-xl font-medium">
             From 14 June 2023 - 15 June 2023
           </h3>
           <div className="grid grid-cols-2">
             <div className="text-left">
-              <p>Room Number</p>
-              <p>Guest Name</p>
-              <p>Check in time</p>
-              <p>Checkout time</p>
-              <p>Current electric usage</p>
+              <p className="flex items-center gap-2"><FaBed/> Room No</p>
+              <p className="flex items-center gap-2"><FaUserAlt/> Guest</p>
+              <p className="flex items-center gap-2"><AiOutlineCheckCircle/> Check in time</p>
+              <p className="flex items-center gap-2"><FaClock /> Checkout time</p>
             </div>
             <div className="text-left">
               <p>: 100</p>
               <p>: Eugene Goh</p>
               <p>: 1:00 p.m.</p>
               <p>: 11:43 a.m.</p>
-              <p>:</p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <h2 className="text-2xl font-semibold">Energy Consumption</h2>
+        <div className="bg-primary-50 rounded-md py-3 px-3 space-y-2 shadow-xl">
           <Line options={options} data={data} className="h-[10rem]" />
           <div className="grid grid-cols-2">
             <div className="text-left">
@@ -120,13 +126,13 @@ const UserStayDetail = () => {
               <p>: RM 20.00</p>
             </div>
           </div>
-          <div className="flex items-center justify-center pt-4">
-            <button className="bg-secondary-500 text-secondary-100 font-medium px-6 py-2 rounded-full" onClick={handleButtonClick}>
-              Check Cashback
-            </button>
-          </div>
         </div>
       </div>
+      <div className="flex items-center justify-center pt-4 pb-96">
+        <button className="bg-primary-700 text-secondary-100 font-medium px-6 py-2 rounded-md" onClick={handleButtonClick}>
+          Check Cashback 🎉
+        </button>
+      </div>      
 
       <BottomNavigation />
     </div>

@@ -15,7 +15,9 @@ const theme = extendBaseTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <div  className='bg-primary-50'>
+        <Component {...pageProps} />
+      </div>
     </ChakraProvider>
   )
 }

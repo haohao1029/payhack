@@ -12,7 +12,7 @@ const Success = () => {
   return (
     <div className="bg-primary-50 min-h-screen px-4 py-4 text-primary-800 flex flex-col justify-between">
       <div>
-        <div className="flex flex-col items-center justify-center mt-8">
+        <div className="flex flex-col items-center justify-center mt-8 text-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -24,7 +24,7 @@ const Success = () => {
             />
           </svg>
           <h1 className="text-2xl font-bold mt-4">Cashback Successful!</h1>
-          <p className="text-lg mt-2">You have received cashback for your purchase.</p>
+          <p className="text-lg mt-2 text-center">You have received cashback for your purchase.</p>
           <p className="text-lg mt-2">Amount: RM 10.00</p>
           <p className="text-lg mt-2">Account Number: 1234 5678</p>
           <p className="text-lg mt-2">Account Name: Ray</p>
