@@ -23,7 +23,9 @@ const Success = () => {
               d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
             />
           </svg>
-          <h1 className="text-2xl font-bold mt-4">Cashback Successful!</h1>
+          <h1 className="text-2xl font-bold mt-4 gradient-title">
+            Cashback Successful!
+          </h1>
           <p className="text-lg mt-2 text-center">
             You have received cashback for your purchase.
           </p>
@@ -47,12 +49,12 @@ const Success = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center mt-8">
+      <div className="flex flex-col items-center justify-center pb-16">
         <button
-          className="px-8 py-4 text-lg font-bold text-white bg-primary rounded-lg"
+          className="bg-primary-700 text-secondary-100 font-medium px-6 py-2 rounded-md"
           onClick={handleContinueShopping}
         >
-          Continue Shopping
+          Return to Home 🏠
         </button>
       </div>
 
