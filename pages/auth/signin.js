@@ -38,7 +38,7 @@ export default function Signin() {
                     <Button colorScheme="teal" mt={4} width="full" onClick={onSignIn()}>
                         Sign In
                     </Button>
-                <p>Haven't got account? <Link href="/auth/signup" textDecoration={"underline"} color={"blue"} >Sign Up</Link></p>
+                <p>Haven&apos;t got account? <Link href="/auth/signup" textDecoration={"underline"} color={"blue"} >Sign Up</Link></p>
             </Box>
         </Center>
     )
