@@ -51,7 +51,7 @@ const UserDashboard = () => {
 
           {/* Card content */}
           <div className="relative z-10 text-primary-700">
-            <h3 className="text-xl font-semibold text-primary-400">Hotel Eleanor - Room 204</h3>
+            <h3 className="text-xl font-semibold text-white">Hotel Eleanor - Room 204</h3>
             <h4 className="text-sm text-primary-500">14 June 2023 - 15 June 2023</h4>
 
             <div className="mt-auto pt-5">
@@ -88,7 +88,7 @@ const UserDashboard = () => {
                   }}
                 ></div>
                 <div className="z-10 text-primary-500">
-                  <h3 className="text-lg font-semibold text-primary-400 pb-3">Hotel Eleanor</h3>
+                  <h3 className="text-lg font-semibold pb-3 text-white">Hotel Eleanor</h3>
                   <h4 className="text-sm text-primary-400">
                     <BsFillCalendarDateFill/> 
                       <span className="text-white">
