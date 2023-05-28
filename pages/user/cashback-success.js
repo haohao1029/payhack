@@ -1,5 +1,5 @@
-import { useRouter } from "next/router";
 import BottomNavigation from "../../components/BottomNavigation";
+import { useRouter } from "next/router";
 
 const Success = () => {
   const router = useRouter();
@@ -12,7 +12,7 @@ const Success = () => {
   return (
     <div className="bg-primary-50 min-h-screen px-4 py-4 text-primary-800 flex flex-col justify-between">
       <div>
-        <div className="flex flex-col items-center justify-center mt-8 text-center">
+        <div className="flex flex-col items-center justify-center mt-8 text-center space-y-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -24,12 +24,26 @@ const Success = () => {
             />
           </svg>
           <h1 className="text-2xl font-bold mt-4">Cashback Successful!</h1>
-          <p className="text-lg mt-2 text-center">You have received cashback for your purchase.</p>
-          <p className="text-lg mt-2">Amount: RM 10.00</p>
-          <p className="text-lg mt-2">Account Number: 1234 5678</p>
-          <p className="text-lg mt-2">Account Name: Ray</p>
-          <p className="text-lg mt-2">Transaction Time: 10:00 a.m. 19/05/23</p>
-          <p className="text-lg mt-2">Transaction ID: 98723138</p>
+          <p className="text-lg mt-2 text-center">
+            You have received cashback for your purchase.
+          </p>
+          <div className="grid grid-cols-2">
+            <div className="text-left space-y-2">
+              <p className="text-lg mt-2">Amount</p>
+              <p className="text-lg mt-2">Account Number</p>
+              <p className="text-lg mt-2">Account Name</p>
+              <p className="text-lg mt-2">Transaction Time</p>
+              <p className="text-lg mt-2">Transaction ID</p>
+            </div>
+
+            <div className="text-left space-y-2">
+              <p className="text-lg mt-2">: RM 10.00</p>
+              <p className="text-lg mt-2">: 1234 5678</p>
+              <p className="text-lg mt-2">: Ray</p>
+              <p className="text-lg mt-2">: 10:00 a.m. 19/05/23</p>
+              <p className="text-lg mt-2">: 98723138</p>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -212,12 +212,20 @@ const AdminStayList = () => {
   return (
     <div>
       <SideNavigation>
-        <div className="space-y-4">
-          <h1 className="text-2xl font-semibold">Information</h1>
+        <div className="px-4 py-4 min-h-[100vh] space-y-4 text-primary-800">
+          <div>
+            <h1 className="text-4xl font-semibold">
+              Hi, <span className="gradient-title">Eleanor Hotel</span>
+            </h1>
+            <h2 className="text-lg">
+              /<span className="underline">Accommodation</span>
+            </h2>
+          </div>
+          <h1 className="text-2xl font-semibold">Accommodation Information</h1>
           <div>
             <table className="table-auto w-[550px] md:w-full">
               <thead>
-                <tr className="bg-gray-100">
+                <tr className="bg-primary-100">
                   <TableHeader className="rounded-l-[0.625rem]">
                     Room Number
                   </TableHeader>
@@ -234,7 +242,7 @@ const AdminStayList = () => {
               <tbody>
                 {UserStayInformation.map((usi, index) => {
                   return (
-                    <tr className="border-b border-gray-300" key={index}>
+                    <tr className="border-b border-primary-300" key={index}>
                       <TableData>{usi.roomNumber}</TableData>
                       <TableData>{usi.customerName}</TableData>
                       <TableData>{usi.checkInDate}</TableData>
